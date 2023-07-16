@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Tickets</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/c9b9c614f8.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <!-- Start of navbar -->
+
+<nav class="navbar navbar-expand-lg bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand text-warning" href="#">Navbar</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Dropdown
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- end of navbar -->
+
+
+
+
+
+
+
+  <!-- hero -->
+
+
+  <div class="hero bg-dark mb-5">
+    <div class="hero-content d-flex">
+      <div class="hero-image">
+        <img src="assets/images/13 Minutes.jpg" alt="">
+      </div>
+      <div class="hero-info">
+        <h1 class="hero-booking">NOW BOOKING</h1>
+        <h1 class="hero-name">MISSION: IMPOSSIBLE</h1>
+
+        <p class="movie-time">Mon 17 Jul, 3:10pm - 6:20pm</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- end of hero -->
+
+
+
+
+
+  <!-- seats container -->
+  
+
+
+    <div class="container-fluid .seats-container">
+      <!-- row with 2 columns which wrap at the 'lg' breakpoint -->
+        <div class="row">
+          <!-- the first column -->
+            <div class="col-12 col-lg-8 table-column">
+                <table>
+                    <tr>
+                        <td class="seatNumber"></td>
+                        <td class="seatNumber">1</td>
+                        <td class="seatNumber">2</td>
+                        <td class="seatNumber">3</td>
+                        <td class="seatNumber">4</td>
+                        <td class="seatNumber">5</td>
+                        <td class="seatNumber"></td>
+                        <td class="seatNumber"></td>
+                        <td class="seatNumber">6</td>
+                        <td class="seatNumber">7</td>
+                        <td class="seatNumber">8</td>
+                        <td class="seatNumber">9</td>
+                        <td class="seatNumber">10</td>
+                        <td class="seatNumber">11</td>
+                        <td class="seatNumber">12</td>
+                        <td class="seatNumber"></td>
+                        <td class="seatNumber"></td>
+                        <td class="seatNumber">13</td>
+                        <td class="seatNumber">14</td>
+                        <td class="seatNumber">15</td>
+                    </tr>
+                    <tr>
+                        <td class="seatLetter">A</td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="aisle"><i class="fa-solid fa-couch"></i></td>
+                        <td class="aisle"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="aisle"><i class="fa-solid fa-couch"></i></td>
+                        <td class="aisle"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="seatLetter">B</td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="aisle"><i class="fa-solid fa-couch"></i></td>
+                        <td class="aisle"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="aisle"><i class="fa-solid fa-couch"></i></td>
+                        <td class="aisle"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                    </tr>
+        
+                    <tr>
+                        <td class="seatLetter">C</td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="aisle"><i class="fa-solid fa-couch"></i></td>
+                        <td class="aisle"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="aisle"><i class="fa-solid fa-couch"></i></td>
+                        <td class="aisle"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                    </tr>
+        
+                    <tr>
+                        <td class="seatLetter">D</td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="aisle"><i class="fa-solid fa-couch"></i></td>
+                        <td class="aisle"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="aisle"><i class="fa-solid fa-couch"></i></td>
+                        <td class="aisle"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                    </tr>
+        
+                    <tr>
+                        <td class="seatLetter">E</td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="aisle"><i class="fa-solid fa-couch"></i></td>
+                        <td class="aisle"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="aisle"><i class="fa-solid fa-couch"></i></td>
+                        <td class="aisle"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                    </tr>
+        
+                    <tr>
+                        <td class="seatLetter">F</td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="aisle"><i class="fa-solid fa-couch"></i></td>
+                        <td class="aisle"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="aisle"><i class="fa-solid fa-couch"></i></td>
+                        <td class="aisle"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                    </tr>
+        
+                    <tr>
+                        <td class="seatLetter">G</td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="aisle"><i class="fa-solid fa-couch"></i></td>
+                        <td class="aisle"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="aisle"><i class="fa-solid fa-couch"></i></td>
+                        <td class="aisle"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                    </tr>
+        
+                    <tr>
+                        <td class="seatLetter">H</td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="aisle"><i class="fa-solid fa-couch"></i></td>
+                        <td class="aisle"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="aisle"><i class="fa-solid fa-couch"></i></td>
+                        <td class="aisle"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                    </tr>
+        
+                    <tr>
+                        <td class="seatLetter">I</td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="aisle"><i class="fa-solid fa-couch"></i></td>
+                        <td class="aisle"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="aisle"><i class="fa-solid fa-couch"></i></td>
+                        <td class="aisle"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                    </tr>
+        
+                    <tr>
+                        <td class="seatLetter">J</td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="aisle"><i class="fa-solid fa-couch"></i></td>
+                        <td class="aisle"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="aisle"><i class="fa-solid fa-couch"></i></td>
+                        <td class="aisle"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                    </tr>
+        
+                    <tr>
+                        <td class="seatLetter">K</td>
+                        <td class="seat available"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat occupied"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="aisle"><i class="fa-solid fa-couch"></i></td>
+                        <td class="aisle"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="aisle"><i class="fa-solid fa-couch"></i></td>
+                        <td class="aisle"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                        <td class="seat"><i class="fa-solid fa-couch"></i></td>
+                    </tr>
+        
+                    <tr>
+                        <td colspan="20" class="table-footer">
+                            <span class="me-3"><i class="fa-solid fa-couch available" id="greenCouch"></i> - available</span>
+                            <span><i class="fa-solid fa-couch occupied" id="redCouch"></i> - occupied</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!-- the second column -->
+            <div class="col-12 col-lg-4 info-column">
+                <div class="info-column-container">
+
+                    <div class=" align-items-center"> 
+                        <h1 class="how-many-seats text-center">HOW MANY SEATS?</h1>
+                        <div class="seats-selection d-flex justify-content-center mt-3">
+                            <button class="minus" onclick="decrementNrOfSeats()">-</button>
+                            <span id="seatsDisplay" class="ms-3 me-3 d-flex align-items-center">1</span>
+                            <button class="plus" onclick="incrementNrOfSeats()">+</button>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div id="selected-seats-container">
+                       
+                    </div>
+
+                    <div class="total mb-5 mt-3">
+                        <span>Total:</span>
+
+                        <span class="totalDisplay">€0.00</span>
+                    </div>
+
+                    <button class="payBtn">REVIEW AND PAY</button>
+                   
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- end of seats container -->
+
+
+
+
+
+
+<!-- footer -->
+
+    <div class="footer">
+        <p>&copy; All rights reserved.</p>
+      </div>  
+
+<!-- end of footer -->
+
+   
+        
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/seats.js"></script>
+    
+</body>
+</html>

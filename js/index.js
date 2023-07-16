@@ -112,6 +112,7 @@ function onMouseLeave(elem) {
 
 function bookNow(elem) {
   let name = elem.dataset.name;
-  localStorage.setItem("movie", name);
-  window.location.replace("timetable.html");
+  // localStorage.setItem("movieName", name);
+  localStorage.setItem("booking",JSON.stringify({movieTime:"Mon 17 Jul, 2:10pm - 2:20pm", movieData:{title:name,src:name}}));
+  window.location.replace("book-tickets.html");
 }
