@@ -182,5 +182,5 @@ function renderMovie(){
 }
 
 function getTimesAndTickets(){
-    window.location.replace("/times.html");
+    window.location.replace("times.html");
 }
