@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Industry Quiz</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+
+        body {
+  background-color: #333333;
+  min-height:100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* navbar */
+
+.navbar {
+  background-color: black;
+}
+
+.navbar .navbar-brand {
+  color: orangered;
+}
+
+.navbar .nav-link {
+  color: gray;
+}
+
+.nav-item a:hover{
+  color:#ffc107;
+}
+
+#logo{
+  font-family: 'Nunito', sans-serif;
+  font-weight:800;
+  font-size:2rem;
+}
+
+/* end of navbar */
+
+
+
+/* footer */
+
+.footer {
+  padding: 10px 0;
+  margin-top:auto;
+  background-color: #ffc107;
+}
+
+.footer p {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  color: gray;
+}
+
+@media screen and (max-width: 1000px) {
+  .footer p {
+    margin-left: 10px;
+  }
+}
+
+/* end of footer */
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.jumbotron {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #ffffff;
+  background-color: gray;
+}
+
+#question {
+  font-weight: bold;
+}
+
+.form-check {
+  margin-bottom: 10px;
+}
+
+.btn-primary {
+  background-color: #3d96e9;
+  border-color: #3d96e9;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+#result {
+  font-size: 18px;
+  font-weight: bold;
+  color: #28a745;
+  text-align: center;
+  margin-top: 30px;
+}
+
+@media (max-width: 576px) {
+  .jumbotron {
+    padding: 10px;
+  }
+  .btn-primary {
+    width: 100%;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+<!-- Start of navbar -->
+<nav class="navbar navbar-expand-lg bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand text-warning" href="index.html" id="logo">CINEMAX</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="quiz.html">Play Game</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- end of navbar -->
+  
+
+
+
+  <div class="container mt-5">
+    <div class="jumbotron">
+      <h2 class="mb-4">Movie Industry Quiz</h2>
+      <div id="quiz-container">
+        <h4 id="question" class="mb-3">Question goes here</h4>
+        <div id="options">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="option" id="option1" value="option1">
+            <label class="form-check-label" for="option1"><span id="option1-text"></span></label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="option" id="option2" value="option2">
+            <label class="form-check-label" for="option2"><span id="option2-text"></span></label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="option" id="option3" value="option3">
+            <label class="form-check-label" for="option3"><span id="option3-text"></span></label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="option" id="option4" value="option4">
+            <label class="form-check-label" for="option4"><span id="option4-text"></span></label>
+          </div>
+        </div>
+        <button id="submit-btn" class="btn btn-primary mt-3">Submit Answer</button>
+      </div>
+      <div id="result" class="mt-4"></div>
+    </div>
+  </div>
+
+  
+<!-- start of footer -->
+<div class="footer">
+    <p>&copy; All rights reserved.</p>
+  </div>
+  
+  <!-- end of footer -->
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="js/quiz.js"></script>
+</body>
+</html>

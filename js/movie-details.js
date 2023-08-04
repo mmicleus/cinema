@@ -1,21 +1,3 @@
-// let movies = [
-//   "13 Minutes",
-//   "300",
-//   "Creed 3",
-//   "Fast and Furious 6",
-//   "Insidious - The Red Door",
-//   "Jumanji",
-//   "Saving Private Ryan",
-//   "Titanic",
-//   "Top Gun - Maverick",
-//   "The Revenant",
-//   "The Expendables 4",
-//   "Madagascar 3",
-//   "Babylon",
-//   "Cocaine Bear",
-//   "Jackass 3",
-// ];
-
 let movies = 
 [
     {
@@ -73,6 +55,15 @@ let movies =
         rating:7.0
     },
     {
+        title:"Grown Ups",
+        description:"After their high school basketball coach passes away, five good friends and former teammates reunite for a Fourth of July holiday weekend.",
+        releaseDate:"June 24, 2010",
+        runningTime:"1h 42m",
+        director:"Dennis Dugan",
+        cast:["Adam Sandler","Salma Hayek","Kevin James"],
+        rating:5.9
+    },
+    {
         title:"Insidious - The Red Door",
         description:"The Lamberts must go deeper into The Further than ever before to put their demons to rest once and for all.",
         releaseDate:"June 27, 2023",
@@ -127,16 +118,25 @@ let movies =
         rating:8.6
     },
     {
-      title:"The Revenant",
-      description:"A frontiersman on a fur trading expedition in the 1820s fights for survival after being mauled by a bear and left for dead by members of his own hunting team.",
-      releaseDate:"December 16, 2015",
-      runningTime:"2h 36m",
-      director:"Alejandro Inarritu",
-      cast:["Leonardo DiCaprio","Tom Hardy","Will Poulter"],
-      rating:8.0
-  },
+        title:"The Nun",
+        description:"A priest with a haunted past and a novice on the threshold of her final vows are sent by the Vatican to investigate the death of a young nun in Romania and confront a malevolent force in the form of a demonic nun.",
+        releaseDate:"September 4, 2018",
+        runningTime:"1h 36m",
+        director:"Corin Hardy",
+        cast:["Demian Bichir","Taissa Farminga","Jonas Bloquet"],
+        rating:5.3
+    },
     {
-        title:"Titanic",
+        title:"The Revenant",
+        description:"A frontiersman on a fur trading expedition in the 1820s fights for survival after being mauled by a bear and left for dead by members of his own hunting team.",
+        releaseDate:"December 16, 2015",
+        runningTime:"2h 36m",
+        director:"Alejandro Inarritu",
+        cast:["Leonardo DiCaprio","Tom Hardy","Will Poulter"],
+        rating:8.0
+    },
+    {
+        title:"The Titanic",
         description:"A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.",
         releaseDate:"November 1, 1997",
         runningTime:"3h 14m",
@@ -156,132 +156,31 @@ let movies =
 
 ]
 
+let movie;
+
+
 onStart();
 
-//this function is called as soon as the file is loaded
-function onStart() {
-  //rendering the list of movies available in the 'movies' array
-  displayMovies(movies);
-  //the first 6 movies in the 'movies' array are displayed on the slides
-  displayCarousel();
-  document.querySelector(".search-btn").addEventListener("click", search);
+function onStart(){
+    movie = JSON.parse(localStorage.getItem("movie"));
+
+    renderMovie();
 }
 
-//takes in the name of a movie (a string) and embeds it into html code
-function generateMovie(name) {
-  return `<div class="col-12 col-sm-6 col-md-4 mt-3">
-  <div
-    class="image"
-    onmouseover="onImageHover(this)"
-    onmouseleave="onMouseLeave(this)"
-    onclick="loadMovieDetails(event)"
-    data-name="${name}"
-  >
-    <img src="assets/images/${name}.jpg" alt="" />
+function renderMovie(){
 
-    <div
-      class="bookNow"
-      onclick="bookNow(this)"
-      data-name="${name}"
-    >
-      BOOK NOW
-    </div>
-  </div>
-</div>`;
+    let imageSrc = movie.title;
+
+    document.querySelector("#detailImage").src = `assets/images/${imageSrc}.jpg`
+    document.querySelector(".movie-details-title").innerHTML = movie.title;
+    document.querySelector(".movie-details-description").innerHTML = movie.description;
+    document.querySelector("#releaseDate").innerHTML = movie.releaseDate;
+    document.querySelector("#runningTime").innerHTML = movie.runningTime;
+    document.querySelector("#director").innerHTML = movie.director;
+    document.querySelector("#cast").innerHTML = movie.cast.toString();
+    document.querySelector("#rating").innerHTML = movie.rating;
 }
 
-//takes in the name of a movie (a string) and embeds it into html code
-function generateCarouselItem(movie, index) {
-  let elem = document.createElement("div");
-  elem.classList.add("carousel-item");
-
-  if (index === 0) elem.classList.add("active");
-
-  elem.innerHTML = `<img
-    src="assets/images/${movie}.jpg"
-    class="d-block w-100"
-    alt="..."
-  />
-  <div class="carousel-footer">
-    <h2>${movie}</h2>
-    <button class="book-btn" data-name="${movie}" onclick="bookNow(this)">BOOK NOW</button>
-  </div>`;
-
-  return elem.outerHTML;
-}
-
-function displayMovies(list) {
-  const container = document.querySelector(".movies-row");
-  container.innerHTML = "";
-  let content = "";
-
-  list.forEach((movie) => {
-    content += generateMovie(movie.title);
-  });
-
-  container.innerHTML = content;
-}
-
-function displayCarousel() {
-  const container = document.querySelector(".carousel-inner");
-  container.innerHTML = "";
-  let content = "";
-
-  for (let i = 0; i < 6; i++) {
-    content += generateCarouselItem(movies[i].title, i);
-  }
-
-  container.innerHTML = content;
-}
-
-//this function is called when clicking the 'search' button
-function search() {
-  let term = document.querySelector(".movie-search").value;
-
-  let list = movies.filter((movie) => movie.title.toLowerCase().includes(term.toLowerCase()));
-
-  displayMovies(list);
-}
-
-// the 3 functions below make the 'book now' button pop up when hovering over a movie
-function onImageHover(elem) {
-  elem.classList.add("hovered");
-}
-
-function onMouseLeave(elem) {
-  elem.classList.remove("hovered");
-}
-
-function bookNow(elem) {
-
-  console.log("Called");
-  let name = elem.dataset.name;
-  // localStorage.setItem("movieName", name);
-  localStorage.setItem("booking",JSON.stringify({movieTime:null, movieData:{title:name,src:name},seats:null,cost:null,custName:null,email:null}));
-  window.location.replace("times.html");
-  // window.location.replace("book-tickets.html");
-}
-
-function getMovieByName(name){
-  return movies.find((movie) => movie.title == name)
-}
-
-function loadMovieDetails(event){
-
-  if(event.target.classList.contains("bookNow") ) 
-    return
-  
-
-  let elem = event.currentTarget;
-
-  let name = elem.dataset.name;
-
-  let movieData = getMovieByName(name);
-
-
-  localStorage.setItem("movie",JSON.stringify(movieData))
-  localStorage.setItem("booking",JSON.stringify({movieTime:null, movieData:{title:name,src:name},seats:null,cost:null,custName:null,email:null}));
-  
-  window.location.replace("movie-details.html");
-
+function getTimesAndTickets(){
+    window.location.replace("/times.html");
 }

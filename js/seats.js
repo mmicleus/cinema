@@ -170,3 +170,19 @@ selectedSeatsContainer.innerHTML = htmlContent;
 
 }
 
+function writeToLocalStorage(key,value){
+    localStorage.setItem(key,value);
+}
+
+function goToCheckout(){
+
+    booking.seats = selectedSeats.map((seat) => seat.dataset.id)
+    booking.cost = selectedSeats.length * 5;
+
+    writeToLocalStorage('booking',JSON.stringify(booking));
+
+    console.log(JSON.stringify(booking));
+    window.location.replace("checkout.html");
+
+}
+
