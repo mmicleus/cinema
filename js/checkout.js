@@ -1,12 +1,4 @@
-
-
-
-
-
-
-
-
-
+    // boolean variables used for form validation
     validFullName = false;
     validEmail = false;
     validPhone = false;
@@ -16,25 +8,13 @@
     validExpYear = false;
     validCVV = false;
 
-
     let data;
 
     onStart();
 
 
-    function validateFullName(){
-        const fullNameInput = document.querySelector("#name");
-
-        if(fullNameInput.value === "") {
-            fullNameInput.classList.add("is-invalid")
-            validFullName = false;
-        }
-        else {
-            fullNameInput.classList.remove("is-invalid")
-            validFullName = true;
-        }
-    }
-
+    
+    // the functions below use regular expressions to validate input values 
     function isValidEmail(value){
         let pattern = /.+@.+/
 
@@ -66,6 +46,20 @@
     function isValidCVV(value){
         let pattern = /\d{3}/
         return pattern.test(value);
+    }
+
+    // the functions below validate input values and update the UI
+    function validateFullName(){
+        const fullNameInput = document.querySelector("#name");
+
+        if(fullNameInput.value === "") {
+            fullNameInput.classList.add("is-invalid")
+            validFullName = false;
+        }
+        else {
+            fullNameInput.classList.remove("is-invalid")
+            validFullName = true;
+        }
     }
 
 
@@ -187,37 +181,29 @@
 
     function onSubmit(){
 
-        console.log("submitted")
         if( !(validFullName && validEmail && validPhone && validNameOnCard && validCreditCardNumber && validExpMonth && validExpYear && validCVV) ){
-            
+
             validateEverything();
             return
         }   
     
+        // If the form is complete and valid, we update the "booking" object in the local storage and redirect the user to the "confirmation" page
         data.custName = document.querySelector("#name").value;
         data.email = document.querySelector("#email").value;
 
-        // console.log("data:")
-        // console.log(data)
         writeToLocalStorage('booking',JSON.stringify(data));
         //redirect to confirmation page
         window.location.replace("confirmation.html");
         
     }
 
-    // function calculateTotal() {
-    //     const selectedMoviePrice = parseInt(movieSelect.options[movieSelect.selectedIndex].dataset.price, 10);
-    //     const quantity = parseInt(quantityInput.value, 10);
-    //     const totalAmount = selectedMoviePrice * quantity;
-    //     totalInput.value = `$${totalAmount}`;
-    // }
-
+    // reads from local storage
     function loadMovieData(){
         data = JSON.parse(localStorage.getItem('booking'));
     }
 
     
-
+    // outputs the data read from the local storage
     function displayBookingData(){
         let movieName = document.querySelector('.hero-name');
         let bookingDate = document.querySelector('.movie-time');
@@ -226,7 +212,6 @@
         let image = document.querySelector(".movie-img");
         let totalDisplay = document.querySelector(".total-euros");
     
-
 
         movieName.innerHTML = data.movieData.title;
         bookingDate.innerHTML = data.movieTime;
@@ -242,8 +227,6 @@
         loadMovieData()
 
         displayBookingData();
-    
-        console.log(data);
     }
 
     

@@ -81,7 +81,7 @@ function displaySeatAvailability(){
     }
 }
 
-//function trigered when a seat is clicked
+
 function onSeatClicked(event){
     let elem = event.currentTarget;
 
@@ -118,7 +118,6 @@ function getRandomNumber(num){
 }
 
 
-//clamps the value of 'num'
 function clamp(num,min,max){
     return Math.min(Math.max(num, min), max);
 }
@@ -183,6 +182,5 @@ function goToCheckout(){
 
     console.log(JSON.stringify(booking));
     window.location.replace("checkout.html");
-
 }
 

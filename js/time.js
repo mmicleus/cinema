@@ -3,10 +3,8 @@ let data;
 onStart()
 
 function onStart(){
-
     loadMovieData()
     displayMovieNameAndPoster()
-
 }
 
 function loadMovieData(){
@@ -50,7 +48,6 @@ function getMonthByIndex(index){
 function getWeekdayByIndex(index){
     let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
     
-
     return days[index]
 }
 
@@ -62,7 +59,6 @@ function getFormattedTime(date, time){
     let month = getMonthByIndex(dateObj.getMonth());
 
     return `${weekday} ${monthDate} ${month}, ${time}`
-
 }
 
 
@@ -78,13 +74,6 @@ function submitBooking() {
 
   writeToLocalStorage('booking',JSON.stringify(data))
 
-
-
   window.location.replace("book-tickets.html");
-
-
-//   console.log("Booking Date:", selectedDate);
-//   console.log("Booking Time:", selectedTime);
-  // Add additional logic to submit the booking information.
 }
 

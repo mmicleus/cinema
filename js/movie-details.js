@@ -162,6 +162,7 @@ let movie;
 onStart();
 
 function onStart(){
+    //Reading from the local storage
     movie = JSON.parse(localStorage.getItem("movie"));
 
     renderMovie();

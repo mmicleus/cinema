@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <head>
-    <!----Insert CSS for rest of site-->
     <script>
 
       let data;
       window.onload = function() {
+
+        // reading from the local storage
         data = JSON.parse(localStorage.getItem('booking'));
         
         //Customer Name
@@ -42,28 +43,8 @@
       function goHome(){
         window.location.replace("index.html");
       }
-
-
-      // window.onload = function() {
-      //   var movie = localStorage.getItem('movie');
-        
-      //   var outputMovie = document.getElementById('movie-output');
-      //   outputMovie.innerText = movie;
-      // };
-      // window.onload = function() {
-      //   var seats = localStorage.getItem('seats');
-        
-      //   var outputSeats = document.getElementById('seats-output');
-      //   outputSeats.innerText = seats;
-      // };
-      // window.onload = function() {
-      //   var totalAmount = localStorage.getItem('totalAmount');
-        
-      //   var outputTotal = document.getElementById('total-ouput');
-      //   outputTotal.innerText = totalAmount;
-      // };
+      
     </script>
-    <!-- <link rel="stylesheet" href="StylesheetOrderConfirm.css"> -->
 
     <style>
 
@@ -78,7 +59,6 @@ body {
     justify-content: center;
     min-height: 100vh;
     background-color: #333333 !important;
-      /* background-image: radial-gradient(circle at 50% 43%, #011027, #000110 70%); */
    }
 
    
@@ -153,13 +133,6 @@ h3#message{
     text-align: center;
 }
 
-/* .cust-information-card{
-  border:1px solid lightgray;
-  padding:2rem;
-  border-radius:5px;
-  margin-top:2rem;
-} */
-
 .info-container{
   row-gap:2rem;
   flex-direction: column;
@@ -213,6 +186,7 @@ h3#message{
 
     </style>
 
+<!-- bootstrap -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
@@ -302,13 +276,9 @@ h3#message{
         <hr>
       </div>
     </div>
-     <!-- <span></span> -->
       <button class="home-btn" onclick="goHome()">Home</button>
     </div>
     
-    <!-- <button onclick="location.href = 'www.cinemahomepage.com';" id="myButton" class="float-left submit-button" >Home</button> -->
-    <!----Add url for homepage-->
-    <!-- <div class="d-flex justify-content-between footer p-3">  </div> -->
     </div>
     </div>
     </div>
@@ -321,6 +291,9 @@ h3#message{
 <!-- end of footer -->
 
     
+    <!-- font-awesome -->
     <script src="https://kit.fontawesome.com/c9b9c614f8.js" crossorigin="anonymous"></script>
+
+    <!-- bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     </body>

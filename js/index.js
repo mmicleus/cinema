@@ -1,20 +1,3 @@
-// let movies = [
-//   "13 Minutes",
-//   "300",
-//   "Creed 3",
-//   "Fast and Furious 6",
-//   "Insidious - The Red Door",
-//   "Jumanji",
-//   "Saving Private Ryan",
-//   "Titanic",
-//   "Top Gun - Maverick",
-//   "The Revenant",
-//   "The Expendables 4",
-//   "Madagascar 3",
-//   "Babylon",
-//   "Cocaine Bear",
-//   "Jackass 3",
-// ];
 
 let movies = 
 [
@@ -234,7 +217,7 @@ function displayCarousel() {
   container.innerHTML = content;
 }
 
-//this function is called when clicking the 'search' button
+
 function search() {
   let term = document.querySelector(".movie-search").value;
 
@@ -248,18 +231,16 @@ function onImageHover(elem) {
   elem.classList.add("hovered");
 }
 
+
 function onMouseLeave(elem) {
   elem.classList.remove("hovered");
 }
 
 function bookNow(elem) {
 
-  console.log("Called");
   let name = elem.dataset.name;
-  // localStorage.setItem("movieName", name);
   localStorage.setItem("booking",JSON.stringify({movieTime:null, movieData:{title:name,src:name},seats:null,cost:null,custName:null,email:null}));
   window.location.replace("times.html");
-  // window.location.replace("book-tickets.html");
 }
 
 function getMovieByName(name){
@@ -273,9 +254,7 @@ function loadMovieDetails(event){
   
 
   let elem = event.currentTarget;
-
   let name = elem.dataset.name;
-
   let movieData = getMovieByName(name);
 
 
